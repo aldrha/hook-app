@@ -35,7 +35,7 @@ export const SimpleForm = () => {
 
     return (
         <>
-            <div className="container p-4">
+            <div className="container">
                 <h1>Formulario Simple</h1>
                 <hr />
 
