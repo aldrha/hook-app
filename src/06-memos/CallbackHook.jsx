@@ -7,15 +7,16 @@ import { useEffect } from 'react';
 export const CallbackHook = () => {
     const [counter, setCounter] = useState(10);
 
-    const incrementFather = useCallback(() => {
+    const incrementFather = useCallback((value) => {
         // usualmente es para cuando se tiene una funcion muy grande que quita rendimiento a la aplicacion entonces
         // se puede memorizar usando useCallback
-        setCounter((value) => value + 1);
+        console.log(value);
+        setCounter((c) => c + value);
     }, []);
 
     useEffect(() => {
         // este es el otro uso, que solo se dispare cuando el padre cambie o la funcion
-        incrementFather();
+        // incrementFather();
     }, [incrementFather]);
 
     // const incrementFather = () => {
